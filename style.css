@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+  background-color: rgba(0, 51, 255, 0.215);
+  font-family: 'Roboto', sans-serif;;
+}
+
+.heading{
+  font-size: larger;
+  font-weight: 700;
+  color: brown;
+  text-shadow: 2px 2px 8px #3f3c3c; 
+  display: flex;  
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.imga {
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.imga .imga-item,
+.imga .imga-item-hidden {
+  display: none; /* hide all slide images not currently being viewed */
+}
+
+.imga .imga-item-visible {
+  display: block; /* show current slide image */
+  animation: fadeVisibility 0.5s; /* for fading effect when switching between slides */
+}
+
+.imga .imga-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Navigation control styles */
+.imga .imga-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* put space between the navigation buttons */
+  position: absolute; /* position navigation buttons on top */
+  top: 50%; /* center navigation buttons on the slide */
+  transform: translateY(-50%); /* align navigation buttons */
+}
+
+.imga .imga-actions button {
+  border-radius: 50px;
+  background-color: white;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.imga .imga-actions button#imga-button-prev {
+  margin-left: 20px; /* prevent previous button from touching the side*/
+}
+
+.imga .imga-actions button#imga-button-next {
+  margin-right: 20px;  /* prevent next button from touching the side*/
+}
+
+.imga-dots {
+  text-align: center; 
+}
+
+.dot {
+  opacity: 0.7; /* gray out dots for slides not being visted */
+}
+
+.dot:focus {
+  border: 1px solid black; /* dot for currently visited slide */
+}
+
+/* hanlde smooth transitions between slides */
+@keyframes fadeVisibility {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

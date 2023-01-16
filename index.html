@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Carousel</title>
+</head>
+<body>
+  
+    <header class="heading">IMAGE CAROUSEL</header>
+  <div class="imga">
+      <div class="imga-item imga-item-visible">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"alt="nature" />
+      </div>
+      <div class="imga-item">
+          <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg"alt="beautiful" />
+      </div>
+      <div class="imga-item">
+          <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg"alt="thunder" />
+      </div>
+      <div class="imga-actions">
+          <button id="imga-button-prev" aria-label="Previous"><</button>
+          <button id="imga-button-next" aria-label="Next">></button>
+      </div>
+      <div class="imga-dots">
+          <input class="dot selected-dot" type="radio" name="dot" checked />
+          <input class="dot" type="radio" name="dot" />
+          <input class="dot" type="radio" name="dot" />
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
